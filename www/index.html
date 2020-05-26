@@ -8,10 +8,36 @@
     <title>Do we have a title here?</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    <h1>project boilerplate using FUSEBOX v4</h1>
-    <p>content goes here.</p>
+    <h1>Minimal Client and Server Project boilerplate using FUSEBOX v4</h1>
+    <form class="calculator">
+        <input type="number" id="number1" value="2" />
+        <input type="number" id="number2" value="3" />
+        <button type="button" id="calculateButton">Calculate</button>
+        <div id="result"></div>
+    </form>
     <script src="build/app.js"></script>
+    <h2>What it does</h2>
+    <ul>
+        <li>Entire project ready in less than a minute</li>
+        <p>Download source</p>
+        <pre>
+npm install
+vscode .
+        </pre>
+        <li>Super fast fusebox continous compilation.</li>
+        <li>Server debugging from VS Code (typescript source).</li>
+        <li>Automatic server restart when required.</li>
+        <li>Client debugging from VS Code (typescript source).</li>
+        <li>Automatic browser refresh.</li>
+        <li>Mocha typescript tests debugging using Mocha Test Explorer extensions.</li>
+    </ul>
+    <h2>What it does do that well yet</h2>
+    <ul>
+        <li>The problems window does not work</li>
+        <li>Mocha code lense appears on the wrong lines.</li>
+    </ul>
 </body>
 
 </html>

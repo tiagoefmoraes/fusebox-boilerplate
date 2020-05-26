@@ -4,16 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "www": "ts-node src/scripts/www.ts"
+    "www": "ts-node src/scripts/www.ts",
+    "test": "mocha",
+    "api": "ts-node-dev --project src/api/tsconfig.json --respawn src/scripts/api.ts"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.6",
+    "@types/mocha": "^7.0.2",
     "@types/node": "^14.0.5",
     "express": "^4.17.1",
     "fuse-box": "^4.0.0-next.435",
-    "ts-node": "^8.10.1"
+    "http-proxy-middleware": "^1.0.4",
+    "mocha": "^7.2.0",
+    "ts-node": "^8.10.1",
+    "ts-node-dev": "^1.0.0-pre.44"
   },
   "dependencies": {}
 }

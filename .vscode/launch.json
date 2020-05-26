@@ -1,7 +1,7 @@
 {
     "version": "0.2.0",
-    "configurations": [       
-        {            
+    "configurations": [
+        {
             "name": "www server",
             "type": "node",
             "request": "launch",
@@ -15,32 +15,32 @@
             "skipFiles": [
                 "<node_internals>/**"
             ]
+        },
+        {
+            "name": "Chrome client",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3005/",
+            "webRoot": "${workspaceFolder}",
+            "sourceMapPathOverrides": {
+                "src/*": "${workspaceFolder}/src/*"
+            }
         }
-        // {
-        //     "name": "api server",
-        //     "type": "node",
-        //     "request": "launch",
-        //     "runtimeArgs": [
-        //         "-r",
-        //         "ts-node/register"
-        //     ],
-        //     "args": [
-        //         "${workspaceFolder}/src/scripts/api.ts"
-        //     ],
-        //     "cwd": "${workspaceFolder}/src/api",
-        //     "skipFiles": [
-        //         "<node_internals>/**"
-        //     ]
-        // },
-        // {
-        //     "name": "Client (Guardians_of_the_Galaxy)",
-        //     "type": "chrome",
-        //     "request": "launch",
-        //     "url": "http://localhost:3005/film/Guardians_of_the_Galaxy",
-        //     "webRoot": "${workspaceFolder}",
-        //     "sourceMapPathOverrides": {
-        //         "src/*": "${workspaceFolder}/src/*"
-        //     }
-        // }
+        {
+            "name": "api server",
+            "type": "node",
+            "request": "launch",
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "args": [
+                "${workspaceFolder}/src/scripts/api.ts"
+            ],
+            "cwd": "${workspaceFolder}/src/api",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
     ]
 }
