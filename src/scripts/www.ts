@@ -1,12 +1,19 @@
 import { fusebox } from 'fuse-box';
+
+console.log({ processCwd: process.cwd() });
+
 fusebox({
   target: 'browser',
   entry: '../../src/client/main.ts',
   webIndex: {
-    template: 'www/index.html',
   },
   compilerOptions: {
-    baseUrl: "aabb"
+
   },
   devServer: true,
-}).runDev();
+  
+}).runDev({
+  bundles: { distRoot: '../../www/build', app: 'app.js' }
+});
+
+

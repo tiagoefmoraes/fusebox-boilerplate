@@ -50,3 +50,24 @@ http://localhost:4444/
 Hello from fusebox and typescript
 
 Adding debugging
+
+it is not emitting in the right folder
+adding a line
+console.log({ processCwd: process.cwd() });
+process is not known
+
+I wish I could add it only to the server part does -D do that?
+npm i @types/node -D
+
+processCwd is corret (fusebox4 root folder)
+But the output is in fusebox4/src/scripts/dist
+I don't want the output there.
+
+To move the output folder I change the rundev part in the www.ts file.
+
+  }).runDev({
+    bundles: { distRoot: '../../www/build', app: 'app.js' }
+  });
+
+also add to the .gitignore
+  /www/build/
