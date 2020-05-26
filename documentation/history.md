@@ -71,3 +71,9 @@ To move the output folder I change the rundev part in the www.ts file.
 
 also add to the .gitignore
   /www/build/
+
+Add a .launch.json file to start the www server
+    The VSCODE debugger works well on it.
+
+
+
