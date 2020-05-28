@@ -18,8 +18,15 @@
     "fuse-box": "^4.0.0-next.435",
     "http-proxy-middleware": "^1.0.4",
     "mocha": "^7.2.0",
-    "ts-node": "^8.10.1",
+    "ts-node": "8.9.1",
     "ts-node-dev": "^1.0.0-pre.44"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "// comments": [
+    "CodeLens is wrong with latest ts-node, so for now we fix it by using v8.9.1",
+    "https://github.com/hbenl/vscode-mocha-test-adapter/issues/111"
+  ],
+  "// recommended-vscode-extensions": [
+    "Mocha Test Explorer will add a tool window with all your tests."
+  ]
 }

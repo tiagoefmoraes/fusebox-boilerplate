@@ -8,7 +8,7 @@ I am not nchanged.
 
 ## Goals
 
-The main aim is to get a fully working development environment in less than seconds.
+The main aim is to get a fully working development environment in seconds.
 
 By working environment I mean:
 
