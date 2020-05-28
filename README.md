@@ -11,17 +11,18 @@ The main aim is to get a fully working development environment in seconds.
 By working environment I mean:
 
 Develop a typescript base web application with the following technologies:
-   ✅ Web Services written in TypeScript
-   ✅ Unit Tests witten in Typescript
-   ✅ Web Application written in TypeScript
-   ✅ Automatic recompilation using the super fast fusebox bundler.
-   🟠 Automatic web page refresh (being tested)
-   🟠 Automatic web services restart (being tested)
-   ✅ Easy install, download the source or git clone it, type `npm install` and the installation is done.
-   🟠 Written in and for VSCode. Open the folder in vscode, press F5 and you see your app. (not fully there yet, now you got to start 3 npm tasks)
-   ✅ debugger works within typescript code for all client code, server code and test code. 
-   🔴 VS Code problems watcher displays errors for all client code, server code and test code (sadly not yet). 
-   ✅ structured folders architecture 
+
+- 🟢 Web Services written in TypeScript
+- 🟢 Unit Tests witten in Typescript
+- 🟢 Web Application written in TypeScript
+- 🟢 Automatic recompilation using the super fast fusebox bundler.
+- 🟠 Automatic web page refresh (being tested)
+- 🟠 Automatic web services restart (being tested)
+- 🟢 Easy install, download the source or git clone it, type `npm install` and the installation is done.
+- 🟠 Written in and for VSCode. Open the folder in vscode, press F5 and you see your app. (not fully there yet, now you got to start 3 npm tasks)
+- 🟢 debugger works within typescript code for all client code, server code and test code. 
+- 🔴 VS Code problems watcher displays errors for all client code, server code and test code (sadly not yet). 
+- 🟢 structured folders architecture 
 ## Quick Run through
 ### Pre-requisite
 Install node.
