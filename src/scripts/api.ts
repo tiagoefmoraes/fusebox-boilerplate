@@ -13,6 +13,12 @@ app.use(express.static(clientPath));
 setupApi(app);
 var server = http.createServer(app);
 
+app.get('/', (req: express.Request, res: express.Response) => {
+    let message = "Server is running.";
+    console.log(message)
+    res.status(200).end(message);
+});
+
 server.listen(app.get('port'), function () {
     console.log('Web server listening on http://localhost:' + app.get('port') + "/");
 })
