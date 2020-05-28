@@ -1,12 +1,27 @@
 import { fusebox } from 'fuse-box';
 import { Express } from "express";
 import * as path from 'path';
+import fs from 'fs';
+import * as chokidar from 'chokidar';
 
 import { createProxyMiddleware } from 'http-proxy-middleware';
 
 console.log({ processCwd: process.cwd() });
 
-fusebox({
+
+chokidar.watch([
+  'www/css/**/*.css',
+  'www/js/**/*.js',
+  'www/images/**/*.*'
+], {
+  persistent: true
+}).on('all', (event, path) => {
+  console.log("TODO make fusebox refresh page...")
+});
+
+
+
+let clientBundle = fusebox({
   target: 'browser',
   entry: '../../src/client/main.ts',
   webIndex: {
@@ -34,9 +49,17 @@ fusebox({
       }
     }
   },
-
-}).runDev({
-  bundles: { distRoot: '../../www/build', app: 'app.js' }
+  watcher: {
+    include: [
+      '../../www/index.html'
+    ]
+  }  
 });
 
+clientBundle.runDev({
+  bundles: {
+    distRoot: '../../www/build',
+    app: 'app.js'
+  }
+});
 
