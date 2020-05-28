@@ -2,9 +2,7 @@
 
 This is a starter boilerblate for fuse-box v4
 
-This repository is my own personal attempt (paganaye).
-
-I am not nchanged.
+![sample impage](documentation/chrome-starting-page.png)
 
 ## Goals
 
@@ -67,3 +65,20 @@ Then you can change any file and it all refreshes automatically.
     ├───img
     └───js    
 ```
+
+# Mocha Test Explorer
+To debug the tests you can use the recommended "Mocha Test Explorer" vs code extension.
+It will show your test on the left side bar. And also let you start them from within the source itself.
+On the picture below we show that the debugger works well.
+
+![sample impage](documentation/test-explorer-and-test-debugging.png)
+
+# Who does that
+
+This repository was written by myself: Pascal GANAYE.
+
+I am not nchanged and not affiliated to fuse-box.
+
+# Questions
+Feel free to ask for question or suggest pull requests on github.
+

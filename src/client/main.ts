@@ -7,7 +7,7 @@ function main() {
     calculateButton.addEventListener("click", (e) => {
         console.log("Button clicked... getting sum from service")
         httpGetAsync("/api/add?a=" + number1 + "&b=" + number2, (response) => {
-            result.innerText = "Result" + response;
+            result.innerText = "Result: " + response;
         });
     });
 }
