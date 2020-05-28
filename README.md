@@ -23,5 +23,27 @@ Develop a typescript base web application with the following technologies:
 > You download the source and git clone it, type `npm install` and the installation is done.
    - Written in and for VSCode
 > You open the folder in vscode and you press F5 and you see your app.
-   - debugger works within typescript code for all client code, server code and test code.
-       
+   - debugger works within typescript code for all client code, server code and test code.       
+   - structured folders
+```
+├───.vscode
+├───documentation
+├───node_modules
+├───src
+│   ├───api
+│   │   ├───entity
+│   │   └───routes
+│   ├───client
+│   │   └───components
+│   ├───lib
+│   │   ├───Expressions
+│   │   └───Statements
+│   ├───scripts
+│   └───tests
+└───www
+    ├───build
+    ├───css
+    ├───fonts
+    ├───img
+    └───js    
+```
