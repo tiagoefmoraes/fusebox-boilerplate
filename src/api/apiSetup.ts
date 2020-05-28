@@ -1,30 +1,23 @@
 import { Express, Router, Request, Response } from "express";
+import { addFunction } from './services/add';
 
 export function apiSetup(app: Express) {
 
     const apiRouter = Router();
     app.use('/api', apiRouter)
 
-    apiRouter.get('/add', (req: Request, res: Response) => {
-        let a = parseInt(req.query.a as string, 10);
-        let b = parseInt(req.query.b as string, 10);
-        console.log("Adding", { a, b });
-        res.status(200).end((a + b).toString());
-    });
-
-    apiRouter.get('*', (req: Request, res: Response) => {
-        let message = ``;
-        res.status(400)
-            .set('Content-Type', 'text/html')
-            .end(htmlMessage(req.url + " is not a valid service url."));
-    });
+    apiRouter.get('/add', addFunction);
 
     app.get('/', (req: Request, res: Response) => {
         res.status(200)
             .set('Content-Type', 'text/html')
             .end(htmlMessage('✅ Server API running', { showSampleAddUrl: true }));
     });
-
+    app.get('*', (req: Request, res: Response) => {
+        res.status(200)
+            .set('Content-Type', 'text/html')
+            .end(htmlMessage("❌ " + req.url + " is not a valid service url."));
+    });
 }
 
 var tagsToEscape: { [key: string]: string } = {
@@ -44,7 +37,8 @@ function htmlMessage(message: string, options: any = {}) {
         '<p>',
         escapeTags(message),
         '</p>',
-        '<p>Try <a href="http://localhost:3006/api/add?a=1&b=2">http://localhost:3006/api/add?a=1&b=2</a></p>'];    
+        '<p>Try <a href="http://localhost:3006/api/add?a=1&b=2">http://localhost:3006/api/add?a=1&b=2</a></p>'];
     result.push('</body></html>');
     return result.join('\n');
 }
+
