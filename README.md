@@ -20,12 +20,8 @@ Develop a typescript base web application with the following technologies:
    - Automatic web page refresh
    - Automatic web services restart
    - Easy install
-   
-        - You download the source and git clone it.
-        - npm install and you've got it all.
-   - Written in and for VSCode    
-   
-        You open the folder in vscode 
-        - you press F5 and you see your app.
-        - debugger works within typescript code for all client code, server code and test code.
+        You download the source and git clone it, type `npm install` and the installation is done.
+   - Written in and for VSCode       
+        You open the folder in vscode and you press F5 and you see your app.
+   - debugger works within typescript code for all client code, server code and test code.
        
